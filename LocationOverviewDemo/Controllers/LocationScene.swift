@@ -18,7 +18,6 @@ class LocationScene: SKScene {
         super.didMove(to: view)
         
         setupCamera()
-//        createBlocks(2000)
         createNodes()
         
         // create gesture to zoom

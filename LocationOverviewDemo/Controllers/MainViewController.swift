@@ -9,47 +9,24 @@
 import UIKit
 import SpriteKit
 
-class MainViewController: UIViewController {
+protocol MainViewViewModelProtocol {
+    var locations: [Location] { get set }
+    mutating func setupSceneView(for frame: CGRect) -> SKView
+}
 
-    private var locations = [Location]()
-    convenience init(locations: [Location]) {
-        self.init()
-        self.locations = locations
-    }
+class MainViewController: UIViewController {
     
-    private var sceneView: SKView?
+    private var viewModel: MainViewViewModelProtocol!
+    convenience init(viewModel: MainViewViewModelProtocol) {
+        self.init()
+        self.viewModel = viewModel
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         self.view.backgroundColor = .red
-        
-        // Setup the sceneview
-        setupSceneView()
-        
-    }
-
-    private func setupSceneView() {
-        
-        self.sceneView = SKView(frame: self.view.frame)
-        guard let sView = self.sceneView else { fatalError("Can't present MainViewController.sceneView") }
-        self.view.addSubview(sView)
-        
-        if let scene = SKScene(fileNamed: "LocationScene") as? LocationScene {
-            // Set the scale mode to scale to fit the window
-            scene.scaleMode = .aspectFill
-        
-            // Set the data for the scene
-            scene.dataManager = SceneDataManager(locations: self.locations, sceneSize: scene.size)
-            
-            // Present the scene
-            sView.presentScene(scene)
-        }
-        
-        sView.ignoresSiblingOrder = true
-        
-        sView.showsFPS = true
-        sView.showsNodeCount = true
+        self.view.addSubview(self.viewModel.setupSceneView(for: self.view.frame))
         
     }
     

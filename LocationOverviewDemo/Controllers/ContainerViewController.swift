@@ -57,7 +57,8 @@ class ContainerViewController: UIViewController {
     }
     
     private func setCompleted() {
-        let mainVC = MainViewController(locations: self.locations)
+        let mainVCVM = MainViewViewModel(locations: self.locations)
+        let mainVC = MainViewController(viewModel: mainVCVM)
         self.transition(to: mainVC)
     }
     

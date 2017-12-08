@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		714887911FDB41A6003A6FAF /* MainViewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 714887901FDB41A6003A6FAF /* MainViewViewModel.swift */; };
 		71B6A2331FC4B75700E27C59 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B6A2321FC4B75700E27C59 /* AppDelegate.swift */; };
 		71B6A2351FC4B75700E27C59 /* ContainerViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 71B6A2341FC4B75700E27C59 /* ContainerViewController.swift */; };
 		71B6A2381FC4B75700E27C59 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 71B6A2361FC4B75700E27C59 /* Main.storyboard */; };
@@ -27,6 +28,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		714887901FDB41A6003A6FAF /* MainViewViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewViewModel.swift; sourceTree = "<group>"; };
 		71B6A22F1FC4B75700E27C59 /* LocationOverviewDemo.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LocationOverviewDemo.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		71B6A2321FC4B75700E27C59 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		71B6A2341FC4B75700E27C59 /* ContainerViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContainerViewController.swift; sourceTree = "<group>"; };
@@ -59,6 +61,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7148878F1FDB418C003A6FAF /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				714887901FDB41A6003A6FAF /* MainViewViewModel.swift */,
+			);
+			path = ViewModels;
+			sourceTree = "<group>";
+		};
 		71B6A2261FC4B75700E27C59 = {
 			isa = PBXGroup;
 			children = (
@@ -115,6 +125,7 @@
 		71BFAF511FCF5F4E008961F5 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				7148878F1FDB418C003A6FAF /* ViewModels */,
 				71B6A2341FC4B75700E27C59 /* ContainerViewController.swift */,
 				71BFAF521FCF5F90008961F5 /* LoadingViewController.swift */,
 				71BFAF571FCF6430008961F5 /* ErrorViewController.swift */,
@@ -215,6 +226,7 @@
 			files = (
 				71C050EB1FD9A3E8006ABBF3 /* SceneDataManager.swift in Sources */,
 				71B6A2351FC4B75700E27C59 /* ContainerViewController.swift in Sources */,
+				714887911FDB41A6003A6FAF /* MainViewViewModel.swift in Sources */,
 				71B6A2481FC4BDFA00E27C59 /* DataManager.swift in Sources */,
 				71BFAF501FCF50E7008961F5 /* Location.swift in Sources */,
 				71BFAF561FCF6324008961F5 /* UIViewController+Transition.swift in Sources */,
